@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Mensaje del sistema</h1>
+
+<h2 th:text="${saludo}"  th:style = "${clasecss}">Saludo por defecto</h2>
+
+<h3>Seission: </h3>
+<p th:text = "${session.operador}">Oper</p>
+
+<h3>Parametros: </h3>
+<p th:text = "${param.nombre}">Nombre</p>
+
+<p th:text ="${#dates.format(#dates.createNow(), 'dd/MM/yyyy')}">Fecha</p>
+</body>
+</html>
